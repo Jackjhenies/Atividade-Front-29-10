@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f1e8;
+    color: #34251d;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "topo topo"
+        "menu conteudo"
+        "rodape rodape";
+}
+
+/* Cabeçalho */
+.topo {
+    grid-area: topo;
+    background-color: #4b2e20;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+
+.topo h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.topo p {
+    margin: 6px 0 0;
+}
+
+/* Menu */
+.menu {
+    grid-area: menu;
+    background-color: #ead9c5;
+    padding: 18px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 14px;
+}
+
+.menu a {
+    color: #4b2e20;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #9a5b2d;
+}
+
+.menu a[aria-current="page"] {
+    color: #9a5b2d;
+    border-left: 3px solid #9a5b2d;
+    padding-left: 8px;
+}
+
+a:focus-visible {
+    outline: 3px solid #9a5b2d;
+    outline-offset: 2px;
+}
+
+/* Conteúdo */
+main {
+    grid-area: conteudo;
+    padding: 24px 30px;
+    background-color: #fffdf9;
+    line-height: 1.7;
+}
+
+main h2,
+main h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #6b3f28;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+main p,
+main li {
+    font-size: 16px;
+}
+
+main p {
+    max-width: 72ch;
+}
+
+main section {
+    margin: 26px 0;
+}
+
+main figure {
+    margin: 22px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+main figure img {
+    display: block;
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+main figcaption {
+    margin-top: 8px;
+    color: #6b3f28;
+    font-size: 14px;
+    font-style: italic;
+}
+
+main aside {
+    background: #f3e8da;
+    border-left: 4px solid #9a5b2d;
+    padding: 12px 18px;
+    margin: 20px 0;
+}
+
+main aside h3 {
+    margin-top: 0;
+}
+
+/* Rodapé */
+footer {
+    grid-area: rodape;
+    background-color: #4b2e20;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
